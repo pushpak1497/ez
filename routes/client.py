@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
-from utils.auth import verify_jwt_token
-from utils.encryption import generate_secure_url
+from utils.auth import hash_password, verify_jwt_token
+from utils.encryption import decrypt_secure_url, generate_secure_url
 from database import db
 
 router = APIRouter()
